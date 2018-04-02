@@ -1,0 +1,30 @@
+{
+    "remi": {
+        "firstName": "Rémi",
+        "name": "Crombez",
+        "title": "",
+        "description": "",
+        "email": ""
+    },
+    "simonne": {
+        "firstName": "Pauline",
+        "name": "Simonneau",
+        "title": "",
+        "description": "",
+        "email": ""
+    },
+    "arthur": {
+        "firstName": "Arthur",
+        "name": "Beaubois",
+        "title": "",
+        "description": "",
+        "email": ""
+    },
+    "max": {
+        "firstName": "Maxime",
+        "name": "",
+        "title": "",
+        "description": "",
+        "email": ""
+    }
+}

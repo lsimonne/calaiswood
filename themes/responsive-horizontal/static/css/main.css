@@ -1,0 +1,6 @@
+#test {
+  -webkit-mask-image: url("../../mask.png");
+  mask-image: url("../../mask.png");
+  background-color: #d1cf1a;
+  height: 500px;
+  }

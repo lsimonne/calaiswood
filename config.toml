@@ -1,6 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "CalaisWood"
+theme = "responsive-horizontal"
 [taxonomies]
 	tag="tags"
 	category="categories"
