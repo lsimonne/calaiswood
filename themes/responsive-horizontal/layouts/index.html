@@ -1,3 +1,11 @@
 {{define "main"}}
-<div id="test"></div>
+<div>
+    <ul class="sidebar-nav">
+        {{ range .Site.Menus.main }}
+        <li>
+            <a href="{{.URL}}"> {{ .Name }} </a>
+        </li>
+        {{end}}
+    </ul>
+</div>
 {{end}}

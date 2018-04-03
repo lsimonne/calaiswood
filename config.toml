@@ -6,3 +6,17 @@ theme = "responsive-horizontal"
 	tag="tags"
 	category="categories"
 
+[params]
+[[menu.main]]
+name="A propos"
+url="/apropos"
+weight=1
+[[menu.main]]
+name="Projets"
+url="/projets"
+weight=1
+[[menu.main]]
+name="Calaiswood Boulevard"
+url="/calaiswoodboulevard"
+weight=1
+
