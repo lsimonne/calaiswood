@@ -1,3 +1,37 @@
-<section id="header">
-this is the header
+<section id="header" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://calaiswood.netlify.com">
+                    <img id="logo" src="/images/logo.png">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul id="main-nav" class="pr-auto navbar-nav navbar-right ml-auto">
+                  
+                    {{$list := (.Site.Menus.main)}}
+                    {{$len := (len $list)}}
+                    {{ range $index, $element := $list }}
+                    <li class="main-nav nav-item" style="padding-right: {{if eq (add $index 1) $len}}0px;{{end}}">
+                        <a href="{{.URL}}"> {{ .Name }} </a>
+                    </li>
+                    {{end}}
+                </ul>
+                <ul id="contact-nav" class="navbar navbar-right">
+                    
+                    <li>
+                            <a class="facebook-link" href="https://www.facebook.com/useitcalais/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                            <a><i class="far fa-envelope" href="https://calaiswood.netlify.com/#contact"></i></a>
+                        </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
 </section>

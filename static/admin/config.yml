@@ -19,7 +19,7 @@ collections:
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Date de publication", name: "date", widget: "datetime"}
       - {label: "Photo", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Lien", name: "lien", widget: "string"}
       - {label: "Texte", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "string"}
   

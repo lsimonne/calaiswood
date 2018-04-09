@@ -8,15 +8,19 @@ theme = "responsive-horizontal"
 
 [params]
 [[menu.main]]
-name="A propos"
+name="L'association"
 url="/apropos"
 weight=1
 [[menu.main]]
 name="Projets"
 url="/projets"
-weight=1
+weight=2
 [[menu.main]]
 name="Calaiswood Boulevard"
 url="/calaiswoodboulevard"
-weight=1
+weight=3
+[[menu.main]]
+name="Participer"
+url="/participer"
+weight=4
 
