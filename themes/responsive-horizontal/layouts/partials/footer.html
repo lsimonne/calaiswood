@@ -1,6 +1,6 @@
 <section id="footer" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <p class="footer-section-title">Contact</p>
+        <p class="footer-section-title">Suivez nous !</p>
         <div class="footer-contents row col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-4 col-md-2 col-sm-2"></div>
             <div class="col-lg-5 col-md-7 col-sm-10 col-xs-12">Un truc sur la newsletter, quam velit, vulputate eu pharetra nec</div>
@@ -31,17 +31,26 @@
         </blockquote>
     </div> -->
     </div>
+
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <p class="footer-section-title">Navigation</p>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            {{ range .Site.Menus.main}}
-            <p>{{.Name}}</p>
-            <div class="submenu">
-                {{ range .Children }}
-                <p>{{.Name}}</p>
-                {{end}}
+        <div class="row">
+
+            {{ range .Site.Menus.main }}
+            <div class="footer-menu col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="{{.URL}}">{{.Name}}</a>
+                <div class="submenu">
+                    {{ range .Children }}
+                    <p class="submenu">
+                        <a href="{{.URL}}">{{ .Name }}</a>
+                    </p>
+                    {{ end }}
+                </div>
             </div>
-            {{end}}
+
+            {{ end }}
+
         </div>
+    </div>
     </div>
 </section>

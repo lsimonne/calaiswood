@@ -1,6 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "CalaisWood"
+title = "Calaiswood"
 theme = "responsive-horizontal"
 [taxonomies]
 	tag="tags"
@@ -15,14 +15,17 @@ theme = "responsive-horizontal"
 		weight=1
 	[[menu.main]]
 		name="Projets"
+		identifier="projets"
 		url="/projets"
 		weight=2
 	[[menu.main]]
 		name="Calaiswood Boulevard"
+		identifier="boulevard"
 		url="/calaiswoodboulevard"
 		weight=3
 	[[menu.main]]
 		name="Participer"
+		identifier="participer"
 		url="/participer"
 		weight=4
 
@@ -43,4 +46,11 @@ theme = "responsive-horizontal"
 		identifier="partenaires"
 		url=""
 		parent="asso"
+		weight=1
+	
+	[[menu.main]]
+		name="Use-It"
+		identifier="useit"
+		url=""
+		parent="projets"
 		weight=1
