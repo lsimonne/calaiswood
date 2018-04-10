@@ -75,7 +75,7 @@ nav li {
 body .fa-facebook-f{
   color: var(--facebook-blue);
   margin-bottom: 3px;
-}
+  }
 #footer {
   font-size: 0.8rem;
   background-color: var(--dark-bg-color);
@@ -86,24 +86,20 @@ body .fa-facebook-f{
 }
 #footer div {
   background-color: var(--dark-bg-color);
-  margin-top: 5px;
+}
+#footer .facebook-link {
+  padding-right: 10px;
 }
 .footer-section-title {
   font-weight: bold;
   text-align: center;    
 }
+#newsletter-section, #footer-links{
+  margin-left: 0px;
+  margin-top: 15px;
+}
 #subscribe-button {
   background-color: var(--red);
-}
-#footer-links {
-  font-size: 20px;
-}
-#footer-envelope {
-  margin-top: 10px;
-}
-.submenu{
-  padding-left: 20px;
-  line-height: 1;
 }
 .masked {
   -webkit-mask-image: url("../../mask.png");

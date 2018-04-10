@@ -6,21 +6,41 @@ theme = "responsive-horizontal"
 	tag="tags"
 	category="categories"
 
-[params]
-[[menu.main]]
-name="L'association"
-url="/apropos"
-weight=1
-[[menu.main]]
-name="Projets"
-url="/projets"
-weight=2
-[[menu.main]]
-name="Calaiswood Boulevard"
-url="/calaiswoodboulevard"
-weight=3
-[[menu.main]]
-name="Participer"
-url="/participer"
-weight=4
+	[menu]
+	[[menu.main]]
+		name="L'association"
+		identifier="asso"
+		url="/apropos"
+		hasChildren=true
+		weight=1
+	[[menu.main]]
+		name="Projets"
+		url="/projets"
+		weight=2
+	[[menu.main]]
+		name="Calaiswood Boulevard"
+		url="/calaiswoodboulevard"
+		weight=3
+	[[menu.main]]
+		name="Participer"
+		url="/participer"
+		weight=4
 
+	[[menu.main]]
+		name="A propos"
+		identifier="apropos"
+		url=""
+		parent="asso"
+		weight=1
+	[[menu.main]]
+		name="Qui sommes nous?"
+		identifier="qui"
+		url=""
+		parent="asso"
+		weight=1
+	[[menu.main]]
+		name="Partenaires et soutiens"
+		identifier="partenaires"
+		url=""
+		parent="asso"
+		weight=1

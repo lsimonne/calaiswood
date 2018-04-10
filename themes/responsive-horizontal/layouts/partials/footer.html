@@ -2,25 +2,24 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <p class="footer-section-title">Contact</p>
         <div class="footer-contents row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="col-lg-2 col-md-2 col-sm-2"></div>
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">Un truc sur la newsletter, quam velit, vulputate eu pharetra nec</div>
+            <div class="col-lg-4 col-md-2 col-sm-2"></div>
+            <div class="col-lg-5 col-md-7 col-sm-10 col-xs-12">Un truc sur la newsletter, quam velit, vulputate eu pharetra nec</div>
         </div>
         <div id="newsletter-section" class="row col-lg-12 col-sm-12 col-md-12 col-xs-12">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-            <div class="row col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                <input class="col-lg-8 col-md-8 col-sm-8 col-xs-8" type="email" placeholder="Adresse email">
+            <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+            <div class="row col-lg-8 col-md-8 col-sm-10 col-xs-10">
+                <input class="col-lg-7 col-md-7  col-sm-5 col-xs-6" type="email" placeholder="Adresse email">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <button id="subscribe-button">M'inscrire</button>
                 </div>
             </div>
         </div>
         <div id="footer-links" class="row col-lg-12 col-sm-12 col-md-12 col-xs-12">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-            <div class="row col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                <a class="facebook-link" href="https://www.facebook.com/useitcalais/" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a>
+            <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+            <div class="row col-lg-8 col-md-8 col-sm-10 col-xs-10">
+                <div class="col-lg-4 col-md-3 fb-like" data-href="https://www.facebook.com/useitcalais/" data-layout="button_count" data-action="like"
+                    data-size="small" data-show-faces="true" data-share="false"></div>
+                <a id="footer-envelope" class="col-lg-3 col-md-3">
                     <i class="far fa-envelope" href="https://calaiswood.netlify.com/#contact"></i>
                 </a>
             </div>
@@ -34,5 +33,15 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <p class="footer-section-title">Navigation</p>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            {{ range .Site.Menus.main}}
+            <p>{{.Name}}</p>
+            <div class="submenu">
+                {{ range .Children }}
+                <p>{{.Name}}</p>
+                {{end}}
+            </div>
+            {{end}}
+        </div>
     </div>
 </section>
