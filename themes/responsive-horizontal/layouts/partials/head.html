@@ -20,7 +20,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/header.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/css/footer.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/index.css" />    
+    {{ if eq .Page.Params.name "accueil" }}
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/index.css" />
+    {{else if eq .Page.Params.name "asso" }}
+    {{else if eq .Page.Params.name "projets" }}
+    {{else if eq .Page.Params.name "boulevard" }}
+    {{else if eq .Page.Params.name "participer" }}  
+    {{end}}
     <!--- Netlify CMS enabling -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     

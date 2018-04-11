@@ -10,11 +10,8 @@
 {{ if eq .Title "Calaiswood Boulevard" }}
 {{ range $index, $element := $list }}
 
-<div class="boulevard-item col-lg-5 col-md-5 col-sm-5 col-xs-5" style="{{ if eq (mod $index 2) 1 }}  margin-left: 500px; {{end}}">
-        <a href="{{.URL}}">{{.Name}}</a></br>
-    {{.Content}}
-    <img class="boulevard-image" src="{{.Params.thumbnail}}"/>
-</div>
+
+{{ partial "boulevardel" ( dict "context" . "index" $index ) }}
  
 {{end}}
 {{end}}

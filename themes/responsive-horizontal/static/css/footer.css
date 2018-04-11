@@ -2,13 +2,12 @@
     font-size: 0.8rem;
     background: var(--dark-bg-color);
     padding: 30px;
-    flex-shrink: 1;
+    flex: 0 0 auto;
     margin: auto auto 0 auto;
     min-height: 250px;
   }
   #footer div {
     background-color: var(--dark-bg-color);
-    margin-top: 5px;
   }
   .footer-section-title {
     font-weight: bold;

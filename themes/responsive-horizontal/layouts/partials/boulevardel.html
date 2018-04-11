@@ -1,0 +1,8 @@
+<!-- place conditions on the other side of the call, i.e. pass parameters "color", "margin" -->
+<div class="boulevard-item col-lg-5 col-md-5 col-sm-5 col-xs-5 {{ if eq .index -1 }} {{end}}
+            {{ if eq ( mod ( add .index 2 ) 3) 0 }} red {{ else if eq ( mod .index 3 ) 0 }} green {{else}} blue {{end}}" 
+    style="{{ if eq .index -1}}  {{else}} {{ if eq ( mod .index 2 ) 1 }}  margin-left: 60%; {{end}} {{end}}">
+        <a href="{{.context.Params.context.URL}}">{{.Name}}</a></br>
+    {{.context.Content}}
+    <img class="boulevard-image" src="{{.context.Params.thumbnail}}"/>
+</div>
