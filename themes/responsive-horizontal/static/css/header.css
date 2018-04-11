@@ -1,0 +1,38 @@
+#header {
+    width: 100%;
+    height: 80px;
+    flex: 0 0 auto;
+  }
+  #menu {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-right: 0;
+    text-align: right;  
+  }
+  .navbar-right.ml-auto {
+  }
+  #logo {
+    height: 80px;
+    margin-top: -20px;
+  }
+  nav ul {
+    list-style-type: none;
+    text-align: right;
+    display: flex;
+    padding-bottom: 0.2rem;
+    
+  }
+  #main-nav {
+    border-bottom: solid black;
+    margin-right: 50px;
+  }
+  nav li {
+   padding-right: 50px;
+  }
+  #contact-nav{
+    margin-bottom: 3px;
+  }
+  body .fa-facebook-f{
+    color: var(--facebook-blue);
+    margin-bottom: 3px;
+  }

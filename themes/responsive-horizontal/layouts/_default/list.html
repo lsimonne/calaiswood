@@ -1,17 +1,21 @@
 {{define "main"}}
 {{$list := .Pages}}
 {{$len := (len $list)}}
-
-<h3>{{.Name}}</h3>
-{{ range $index, $element := $list }}
 <!-- if index modulo 2 eq 0 margin less , else margin more
     thirds for the colors:: len - index % 2, 3
 -->
+<h3>{{.Title}}</h3>
+{{.Content}}
+
+{{ if eq .Title "Calaiswood Boulevard" }}
+{{ range $index, $element := $list }}
+
 <div class="boulevard-item col-lg-5 col-md-5 col-sm-5 col-xs-5" style="{{ if eq (mod $index 2) 1 }}  margin-left: 500px; {{end}}">
         <a href="{{.URL}}">{{.Name}}</a></br>
     {{.Content}}
     <img class="boulevard-image" src="{{.Params.thumbnail}}"/>
 </div>
  
+{{end}}
 {{end}}
 {{end}}

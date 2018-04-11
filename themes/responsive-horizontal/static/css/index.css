@@ -1,0 +1,19 @@
+.home-div {
+    height: 300px;
+    margin: 0;
+    padding: 30px;
+}
+
+.home-div.row {
+    text-align: center;
+}
+
+@media (min-height: 576px){
+    #green {
+     margin-top: 80px;
+    }
+
+    #blue {
+        margin-top: 150px;
+    }
+}
