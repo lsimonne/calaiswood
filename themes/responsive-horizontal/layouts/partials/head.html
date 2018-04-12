@@ -22,9 +22,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/footer.css" />
     {{ if eq .Page.Params.name "accueil" }}
     <link rel="stylesheet" type="text/css" media="screen" href="/css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/boulevard.css" />
     {{else if eq .Page.Params.name "asso" }}
     {{else if eq .Page.Params.name "projets" }}
     {{else if eq .Page.Params.name "boulevard" }}
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/boulevard.css" />
     {{else if eq .Page.Params.name "participer" }}  
     {{end}}
     <!--- Netlify CMS enabling -->

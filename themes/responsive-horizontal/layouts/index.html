@@ -6,17 +6,48 @@
 <div class="colored-menu row">
     <div id="green" class="green home-div col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <figure id="" class="row">
-            <img class="col-lg-12 col-md-12 col-sm-12 col-xs-12" src="/test" />
+            <img class="col-lg-12 col-md-12 col-sm-12 col-xs-12" src="/images/test.jpg" />
             <figcaption class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 test caption
             </figcaption>
         </figure>
     </div>
     <div id="red" class="red home-div col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <h5 class="row">Projet en cours</h5>
+        <h5 class="colore-menu-title">Projet en cours</h5>
+        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis
+            vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris
+            molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis
+            magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate
+            eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit
+            amet.
+        </p>
     </div>
     <div id="blue" class="blue home-div col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <h5 class="colore-menu-title">Agenda</h5>
+            <ul>
+                {{ range .Pages}}
+                <li>{{.Title}}</li>
+                {{end}}
+            </ul>
     </div>
 </div>
-
+<div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+    {{range .Site.Sections }}
+        {{ if eq .Title "Calaiswood Boulevard" }}
+            {{$list := .Pages}}
+            {{$len := (len $list)}}
+            {{ range $index, $element := $list }}
+                {{ if eq ( add $index 1 ) $len}}
+                    {{ partial "boulevardel" (dict "context" . "color" "blue" "margin" "80px 0 0 0")}}
+                {{end}}
+            {{end}}
+        {{end}}
+    {{end}}
+</div>
+<div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2"></div>
+    {{ partial "contact" }}
+</div>
 {{end}}

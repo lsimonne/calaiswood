@@ -1,8 +1,19 @@
 <!-- place conditions on the other side of the call, i.e. pass parameters "color", "margin" -->
-<div class="boulevard-item col-lg-5 col-md-5 col-sm-5 col-xs-5 {{ if eq .index -1 }} {{end}}
-            {{ if eq ( mod ( add .index 2 ) 3) 0 }} red {{ else if eq ( mod .index 3 ) 0 }} green {{else}} blue {{end}}" 
-    style="{{ if eq .index -1}}  {{else}} {{ if eq ( mod .index 2 ) 1 }}  margin-left: 60%; {{end}} {{end}}">
-        <a href="{{.context.Params.context.URL}}">{{.Name}}</a></br>
-    {{.context.Content}}
-    <img class="boulevard-image" src="{{.context.Params.thumbnail}}"/>
+<div class="boulevard-item col-lg-8 col-md-8 col-sm-8 col-xs-8 {{.color}}" style="margin: {{.margin}};">
+
+    <div class="row">
+
+        <figure id="" class="boulevard-image col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img class="col-lg-12 col-md-12 col-sm-12 col-xs-12" src="{{.context.Params.thumbnail}}" />
+            <figcaption class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+            </figcaption>
+        </figure>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h5>
+                        <a href="{{.context.Params.context.URL}}">{{.context.Name}}</a>
+                    </h5>
+            {{.context.Content}}
+       </div>
+    </div>
 </div>

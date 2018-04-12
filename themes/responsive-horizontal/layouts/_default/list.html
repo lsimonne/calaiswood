@@ -1,18 +1,28 @@
 {{define "main"}}
-{{$list := .Pages}}
+{{$list := .Pages.Reverse}}
 {{$len := (len $list)}}
-<!-- if index modulo 2 eq 0 margin less , else margin more
-    thirds for the colors:: len - index % 2, 3
--->
+
 <h3>{{.Title}}</h3>
-{{.Content}}
-
+<p class="title-text">{{.Params.titleText}}</p>
 {{ if eq .Title "Calaiswood Boulevard" }}
-{{ range $index, $element := $list }}
+    
+    {{ range $index, $element := $list }}
+{{.Scratch.Set "margin" "80px 0 0 0"}}
+<div class="row">
+        {{if eq ( mod ( add $index 2 ) 3) 0 }}  
+             {{ .Scratch.Set "color" "red" }} 
+        {{ else if eq ( mod $index 3 ) 0 }} 
+             {{.Scratch.Set "color" "green"}}        
+        {{else}}
+             {{ .Scratch.Set "color" "blue"}}
+        {{end}}
+        {{ if eq ( mod $index 2 ) 1 }}
+            {{.Scratch.Set "margin" "80px 0 0 33.3333%"}}
+        {{end}}
 
+    {{ partial "boulevardel" ( dict "context" . "color" (.Scratch.Get "color") "margin" (.Scratch.Get "margin") ) }}
+ </div>
+    {{end}}
+{{end}}
 
-{{ partial "boulevardel" ( dict "context" . "index" $index ) }}
- 
-{{end}}
-{{end}}
 {{end}}
