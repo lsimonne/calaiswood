@@ -59,6 +59,7 @@ button {
   border: none;
   border-radius: 3px;
   height: 40px;
+  cursor: pointer;
 }
 input , textarea {
   border-radius: 1px;
