@@ -5,3 +5,7 @@
 .boulevard-image{
     margin-top: 40px;
 }
+@media (max-width: 768px) {
+    .boulevard-item { margin: 0;
+    }
+}

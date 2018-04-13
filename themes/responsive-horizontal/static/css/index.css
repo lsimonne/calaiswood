@@ -1,7 +1,12 @@
+.mouette {
+    top: 100px;
+    right: 5%;
+    opacity: 1;
+}
 .home-div {
     height: 350px;
     margin: 0;
-    padding: 30px 40px 30px 40px;
+    padding: 35px;
     text-align: center;
 }
 .home-div.row {
@@ -22,7 +27,8 @@
 }
 #contact {
     margin-top: 80px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .contact-input {
     padding: 5px;
@@ -31,11 +37,13 @@
 #contact-message {
     min-height: 15rem;
 }
+.checkbox {
+    padding-right: 0;
+}
 @media (min-height: 576px){
     #green {
      margin-top: 80px;
     }
-
     #blue {
         margin-top: 150px;
     }
