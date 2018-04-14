@@ -1,5 +1,5 @@
 <!-- place conditions on the other side of the call, i.e. pass parameters "color", "margin" -->
-<div class="boulevard-item col-lg-8 col-md-8 col-sm-8 col-xs-8 {{.color}}" style="margin: {{.margin}};">
+<div class="boulevard-item col-lg-8 col-md-8 col-sm-8 col-xs-8 {{.color}} {{if eq .color "blue"}} masked {{end}}" style="margin: {{.margin}};">
 
     <div class="row">
 

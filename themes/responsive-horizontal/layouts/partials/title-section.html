@@ -1,4 +1,6 @@
 <div class="title-section">
-        <h3>{{.context}}</h3>
-    <p class="title-text">{{.context}}</p>
+        <h3>{{.context.Params.title}}</h3>
+            {{ if not (eq .context.Params.title "L'association")}}
+    <p class="title-text">{{.context.Params.text}}</p>
+    {{end}}
 </div>

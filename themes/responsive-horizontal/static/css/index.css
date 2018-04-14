@@ -25,6 +25,10 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 10;
 }
+#image-du-jour {
+    max-height: 280px;
+    max-width: 100%;
+}
 #contact {
     margin-top: 80px;
     padding-top: 15px;

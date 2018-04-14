@@ -1,9 +1,9 @@
 {{define "main"}}
 {{$list := .Pages.Reverse}}
 {{$len := (len $list)}}
-LIST DEFAULT
-<h3>{{.Title}}</h3>
-<p class="title-text">{{.Params.titleText}}</p>
+
+{{ partial "title-section" (dict "context" . "title" .Title "text" .Params.text)}}
+
 {{ if eq .Title "Calaiswood Boulevard" }}
     
     {{ range $index, $element := $list }}
