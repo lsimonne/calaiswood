@@ -11,13 +11,13 @@
     <!-- make partial for home-div with params color, content -->
     <div id="green" class="green home-div col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <figure class="row">
-            <img id="image-du-jour" src="/images/uploads/image_du_moment.jpg" />
+            <img id="image-du-jour" src="/images/uploads/photo_du_moment.jpg" />
             <figcaption class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 Légende de la photo du jour
             </figcaption>
         </figure>
     </div>
-    <div id="red" class="red home-div col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    <div id="red" class="home-div red col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <h5>Projet en cours</h5>
         <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis
@@ -28,7 +28,7 @@
             amet.
         </p>
     </div>
-    <div id="blue" class="masked blue home-div col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    <div id="blue" class="blue home-div b-crooked col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <h5 class="colore-menu-title">Agenda</h5>
             <ul>
                 {{ range .Pages}}
@@ -41,11 +41,11 @@
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
     {{range .Site.Sections }}
         {{ if eq .Title "Calaiswood Boulevard" }}
-            {{$list := .Pages}}
+            {{$list := .Pages.Reverse}}
             {{$len := (len $list)}}
             {{ range $index, $element := $list }}
                 {{ if eq ( add $index 1 ) $len}}
-                    {{ partial "boulevardel" (dict "context" . "color" "blue" "margin" "80px 0 0 0")}}
+                    {{ partial "boulevardel" (dict "context" . "color" "blue"  "margin" "80px 0 0 0")}}
                 {{end}}
             {{end}}
         {{end}}

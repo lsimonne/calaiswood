@@ -1,0 +1,106 @@
+
+.tl-corner::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -20px;
+    left: -40px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-bg-color);
+    transform: rotate(-18deg);
+  }
+  .wavy-bot.red, .wavy-bot.blue, .wavy-bot.green {
+    padding-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+  }
+  .wavy-bot::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    bottom: -115px;
+    left: 0px;
+    border-width: 2000px 1340px 80px 375px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-bg-color);
+    transform: rotate(8deg);
+    overflow: hidden;
+  }
+  .tr-corner::before{
+    z-index: 1;
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -42px;
+    right: -6px;
+    border-width: 0 70px 65px 12px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-bg-color);
+    transform: rotate(170deg);
+  }
+
+  .bl-corner::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    bottom: -30px;
+    left: -50px;
+    border-width: 150px 200px 30px 300px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-bg-color);
+    transform: rotate(8.5deg);
+  }
+  .r-crooked:before{
+    content: "";
+    position: absolute;
+    right: -55%;
+    top: 45%;
+    width: 110%;
+	height: 50px;
+    background: var(--main-bg-color);
+    transform: rotate(87deg);
+    }
+    .r-crooked {
+        overflow: hidden;
+    }
+  .b-crooked::after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    bottom: -30px;
+    width: 110%;
+	height: 50px;
+    background: var(--main-bg-color);
+    transform: rotate(3deg);
+  }
+  .b-crooked {
+      overflow: hidden;
+  }
+    
+@media (max-width: 968px) {
+      .wavy-bot::after {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        bottom: -90px;
+        left: 0px;
+        border-width: 2000px 970px 70px 300px;
+        border-style: solid;
+        border-color: transparent transparent var(--main-bg-color);
+        transform: rotate(8.5deg);
+    overflow: hidden;
+        
+      }
+      .wavy-bot {
+          overflow: hidden;
+      }
+}

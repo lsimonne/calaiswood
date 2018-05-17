@@ -2,6 +2,11 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Calaiswood"
 theme = "responsive-horizontal"
+
+# SEO
+enableRobotsTXT = true
+canonifyURLs = true
+
 [taxonomies]
 	tag="tags"
 	category="categories"

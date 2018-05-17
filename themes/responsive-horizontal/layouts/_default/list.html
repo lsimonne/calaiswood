@@ -1,5 +1,5 @@
 {{define "main"}}
-{{$list := .Pages.Reverse}}
+{{$list := .Pages}}
 {{$len := (len $list)}}
 
 {{ partial "title-section" (dict "context" . "title" .Title "text" .Params.text)}}
